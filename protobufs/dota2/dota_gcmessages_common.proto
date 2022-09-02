@@ -300,7 +300,7 @@ message CMatchTeamTimedStats {
 
 message CMatchAdditionalUnitInventory {
 	optional string unit_name = 1;
-	repeated uint32 items = 2;
+	repeated uint32 items = 2 [packed=true];
 }
 
 message CMatchPlayerPermanentBuff {
@@ -1092,7 +1092,7 @@ message CMsgDOTAMatch {
 	optional uint32 tournament_id = 51;
 	optional uint32 tournament_round = 52;
 	optional uint32 pre_game_duration = 53;
-	repeated uint32 mvp_account_id = 56;
+	repeated uint32 mvp_account_id = 56 [packed=true];
 	repeated .CMsgDOTAMatch.Coach coaches = 57;
 }
 
@@ -1175,7 +1175,7 @@ message CMsgDOTABotDebugInfo {
 	optional float desire_farm_lane_bot = 10;
 	optional float desire_farm_roshan = 11;
 	optional float execution_time = 12;
-	repeated uint32 rune_status = 13;
+	repeated uint32 rune_status = 13 [packed=true];
 }
 
 message CMsgSuccessfulHero {
