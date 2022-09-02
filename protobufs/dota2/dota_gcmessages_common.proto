@@ -1047,8 +1047,8 @@ message CMsgDOTAMatch {
 	optional fixed32 starttime = 4;
 	repeated .CMsgDOTAMatch.Player players = 5;
 	optional uint64 match_id = 6;
-	repeated uint32 tower_status = 8;
-	repeated uint32 barracks_status = 9;
+	repeated uint32 tower_status = 8 [packed=true];
+	repeated uint32 barracks_status = 9 [packed=true];
 	optional uint32 cluster = 10;
 	optional uint32 first_blood_time = 12;
 	optional fixed32 replay_salt = 13;
