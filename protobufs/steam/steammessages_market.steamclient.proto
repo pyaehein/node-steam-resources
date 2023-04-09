@@ -1,3 +1,4 @@
+import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
@@ -18,6 +19,7 @@ message CEconMarket_IsMarketplaceAllowed_Response {
 
 service EconMarket {
 	option (service_description) = "A service to use market functions";
+
 	rpc IsMarketplaceAllowed (.CEconMarket_IsMarketplaceAllowed_Request) returns (.CEconMarket_IsMarketplaceAllowed_Response) {
 		option (method_description) = "Checks whether or not the authed account is allowed to use the market";
 	}

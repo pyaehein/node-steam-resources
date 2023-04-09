@@ -2,11 +2,10 @@
 
 cd "$(dirname "$0")"
 
-rsync -arhv ../steamtrack/Protobufs/ ./steam/
-rsync -arhv ../backend/files/csgo/Protobufs/ ./csgo/
-rsync -arhv ../backend/files/dota/Protobufs/ ./dota2/
-rsync -arhv ../backend/files/tf/Protobufs/ ./tf2/
-rsync -arhv ../backend/files/artifact/Protobufs/ ./artifact/
+rsync -arhv --delete ../steamtrack/Protobufs/ ./steam/
+rsync -arhv --delete ../backend/files/csgo/Protobufs/ ./csgo/
+rsync -arhv --delete ../backend/files/dota/Protobufs/ ./dota2/
+rsync -arhv --delete ../backend/files/tf/Protobufs/ ./tf2/
 cp -r ./steam/google ./
 
 git add -A
